@@ -3,7 +3,7 @@ project(intervals)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED On)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
 
 set(BOOST_ROOT $ENV{BOOST_ROOT})
@@ -17,7 +17,9 @@ set(Boost_ARCHITECTURE -x64)
 set(Boost_COMPILER -gcc7)
 set(Boost_MULTITHREADED TRUE)
 
-find_package(Boost 1.60.0 REQUIRED COMPONENTS date_time)
+find_package(Boost 1.60.0 REQUIRED
+        #COMPONENTS date_time
+        )
 
 add_subdirectory(src)
 add_subdirectory(test)

@@ -30,15 +30,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f029306-ace4-43e1-997a-94c2a24a1b0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/cpp17.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/segment.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/active_segments.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/active_segments.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -60,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1159">
-              <caret line="122" column="31" lean-forward="true" selection-start-line="122" selection-start-column="31" selection-end-line="122" selection-end-column="31" />
+            <state relative-caret-position="361">
+              <caret line="70" column="79" lean-forward="true" selection-start-line="70" selection-start-column="79" selection-end-line="70" selection-end-column="79" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -72,10 +65,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/active_segments.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="95">
+              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
               <folding>
                 <element signature="e#86#106#0" expanded="true" />
+                <element signature="e#1093#1199#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/segment.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+            <state relative-caret-position="190">
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -93,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="95">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -103,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -158,12 +152,12 @@
         <option value="$PROJECT_DIR$/include/utils.h" />
         <option value="$PROJECT_DIR$/include/time_stamp.h" />
         <option value="$PROJECT_DIR$/test/intervals_test.cpp" />
-        <option value="$PROJECT_DIR$/src/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/test/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/include/segment.h" />
         <option value="$PROJECT_DIR$/include/active_segments.h" />
+        <option value="$PROJECT_DIR$/src/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
@@ -287,7 +281,7 @@
       <workItem from="1555113334453" duration="688000" />
       <workItem from="1555145652689" duration="1425000" />
       <workItem from="1555331172507" duration="3578000" />
-      <workItem from="1555336112266" duration="7191000" />
+      <workItem from="1555336112266" duration="8421000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1554994213517</created>
@@ -303,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555145809823</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="intervals intersection with infinity right bound">
+      <created>1555343566900</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555343566900</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -324,17 +325,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66451000" />
+    <option name="totallyTimeSpent" value="67681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21589689" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21589689" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31299436" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1841808" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4180791" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -350,28 +352,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2094522" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.49830508" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4180791" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49838883" weight="0.4259887" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299435" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5016112" side_tool="true" weight="0.31864408" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.7690655" weight="0.3299435" />
-      <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.4989259" weight="0.45423728" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -389,7 +369,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="intervals intersection with infinity right bound" />
+    <option name="LAST_COMMIT_MESSAGE" value="intervals intersection with infinity right bound" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/bits/stl_algobase.h">
@@ -492,20 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -544,27 +511,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/include/segment.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        <state relative-caret-position="190">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/active_segments.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="95">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding>
             <element signature="e#86#106#0" expanded="true" />
+            <element signature="e#1093#1199#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="122" column="31" lean-forward="true" selection-start-line="122" selection-start-column="31" selection-end-line="122" selection-end-column="31" />
+        <state relative-caret-position="361">
+          <caret line="70" column="79" lean-forward="true" selection-start-line="70" selection-start-column="79" selection-end-line="70" selection-end-column="79" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

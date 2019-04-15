@@ -15,7 +15,7 @@
 using namespace boost;
 
 using stamps_set = std::set<lvn::time_stamp<int>>;
-using property_set = std::set<std::string>;
+using property_set = std::multiset<std::string>;
 
 const int mac_count = 4;
 std::array<std::string, mac_count> mac_store = {
@@ -119,6 +119,3 @@ int main()
 
     return 0;
 }
-
-// разрешить дубликаты std::set
-

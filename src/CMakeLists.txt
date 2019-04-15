@@ -8,4 +8,4 @@ add_executable(intervals main.cpp
 
 target_include_directories(intervals PUBLIC ${INCLUDE_DIR})
 target_include_directories(intervals PUBLIC ${Boost_INCLUDE_DIRS})
-target_link_libraries(intervals Boost::date_time)
+#target_link_libraries(intervals Boost::date_time)
