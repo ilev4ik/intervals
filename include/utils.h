@@ -13,6 +13,11 @@ namespace lvn {
         std::copy(begin, end, std::ostream_iterator<typename std::iterator_traits<It>::value_type>(std::cout, "\n"));
     }
 
+    template<typename Container>
+    void print_iterable_range(Container c) {
+        print_iterable(c.begin(), c.end());
+    }
+
     void underline(std::size_t count = 20) {
         std::cout << std::setfill('=') << std::setw(count) << "" << std::endl;
     }
