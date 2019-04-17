@@ -7,18 +7,20 @@
 
 namespace lvn {
 
-    template <typename T = int>
+    template <typename T, typename D>
     struct time_stamp {
-        T time;
+        using stamp_type = T;
+        using data_type = D;
+
+        stamp_type time;
         bool active;
+        data_type data;
 
-        using value_type = T;
-
-        friend bool operator<(const time_stamp<T> &lhs, const time_stamp<T> &rhs) {
+        friend bool operator<(const time_stamp<T, D> &lhs, const time_stamp<T, D> &rhs) {
             return lhs.time < rhs.time;
         }
 
-        friend std::ostream &operator<<(std::ostream &os, const time_stamp<T> &s) {
+        friend std::ostream &operator<<(std::ostream &os, const time_stamp<T, D> &s) {
             os << std::boolalpha;
             return os << "{ " << s.time << ", " << s.active << " }";
         }

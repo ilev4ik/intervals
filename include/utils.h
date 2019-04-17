@@ -18,8 +18,8 @@ namespace lvn {
         print_iterable(c.begin(), c.end());
     }
 
-    void underline(std::size_t count = 20) {
-        std::cout << std::setfill('=') << std::setw(count) << "" << std::endl;
+    void underline(char symb = '=', std::size_t count = 20) {
+        std::cout << std::setfill(symb) << std::setw(count) << "" << std::endl;
     }
 }
 

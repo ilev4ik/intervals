@@ -11,22 +11,31 @@ using namespace lvn::detail;
 
 int main()
 {
-    stamps_set<> stamps1 = {
-            {0, false}, {10, true}, {20, false},
-            {50, true}, {100, false}, {200, true},
-            {250, false}, {300, true}, {310, false},
-            {320, true}
+    using stamps_t = stamps_set<int, std::string>;
+    stamps_t stamps1 = {
+            {0, true, "11::"},
+            {10, true, "22::"},
+            {20, false, "11::"}
     };
 
+    stamps_accumulator<int, std::string> stamper;
+    for (auto&& i : stamper.add(stamps1)) {
+        lvn::print_iterable_range(i);
+    }
 
-    stamps_set<> stamps2 = {
-            {5, false}, {15, true}, {25, false}, {330, true}
-    };
-
-    stamps_accumulator stamper;
-    lvn::print_iterable_range(stamper.add(stamps1));
     lvn::underline();
-    lvn::print_iterable_range(stamper.add(stamps2));
+
+    stamps_t stamps2 = {
+            {0, true, "22::"},
+            {10, true, "44::"},
+            {20, false, "44::"},
+            {50, true, "11::"},
+            {100, false, "22::"}
+    };
+    for (auto&& i : stamper.add(stamps2)) {
+        lvn::print_iterable_range(i);
+    }
+    lvn::underline();
 
     stamper.intersect();
     stamper.print_res();
