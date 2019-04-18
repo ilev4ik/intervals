@@ -1,4 +1,5 @@
 #include "../include/stamps_accumulator.h"
+
 #include <algorithm>
 
 using namespace boost;

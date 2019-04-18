@@ -7,6 +7,8 @@
 #include <iostream>
 #include <type_traits>
 
+#include <boost/io/ios_state.hpp>
+
 namespace lvn {
     template<typename It>
     void print_iterable(It begin, It end) {
@@ -19,6 +21,7 @@ namespace lvn {
     }
 
     void underline(char symb = '=', std::size_t count = 20) {
+        boost::io::ios_all_saver guard(std::cout);
         std::cout << std::setfill(symb) << std::setw(count) << "" << std::endl;
     }
 }

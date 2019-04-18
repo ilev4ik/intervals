@@ -12,7 +12,7 @@ namespace lvn {
     template<typename T, typename D, class Enable = void>
     struct segment;
 
-    // D should be equality comparable
+    // D should be less comparable
     template<typename T, typename D>
     struct segment<T, D, typename std::enable_if<std::is_integral<T>::value>::type> {
         segment(T s, boost::optional<T> e, const std::multiset<D>& i_mset)
@@ -29,6 +29,28 @@ namespace lvn {
         boost::optional<T> end;
         std::multiset<D> info_set;
 
+        std::vector<D> collisions() const {
+            std::vector<D> rv;
+            for (auto each = info_set.begin(); each != info_set.end(); each = info_set.upper_bound(*each)) {
+                decltype(info_set.begin()) from, to;
+                std::tie(from, to) = info_set.equal_range(*each);
+                if (std::distance(from, to) > 1) {
+                    std::copy(from, to, std::back_inserter(rv));
+                }
+            }
+            return rv;
+        }
+
+        bool unique() const {
+            std::size_t unique_count = 0;
+
+            for (auto each = info_set.begin(); each != info_set.end(); each = info_set.upper_bound(*each)) {
+                unique_count++;
+            }
+
+            return unique_count == info_set.size();
+        }
+
         friend bool operator<(const segment<T, D>& lhs, const segment<T, D>& rhs) {
             return lhs.start < rhs.start;
         }
@@ -40,9 +62,10 @@ namespace lvn {
         friend std::ostream &operator<<(std::ostream& os, const segment<T, D>& s) {
             static const std::string infty = "\xE2\x88\x9E";
 
-            os << "[ " << s.start << "; "
-               << (s.end ? std::to_string(s.end.value()) : infty)
-               << " )";
+            os << "[ ";
+            os << s.start << "; "
+               << (s.end ? std::to_string(s.end.value()) : infty);
+            os << " )";
 
             os << " = { ";
             for (auto&& info : s.info_set) {
@@ -51,7 +74,6 @@ namespace lvn {
             os << "}";
 
             return os;
-
         }
     };
 }

@@ -24,6 +24,8 @@ namespace lvn {
         if (begin == end) {
             return rv;
         }
+
+        // precondition: all *(it)->data should be the same
         const data_type info = begin->data;
 
         rv.reserve(std::distance(begin, end) / 2);
