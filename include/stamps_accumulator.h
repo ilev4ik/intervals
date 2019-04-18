@@ -2,11 +2,8 @@
 #ifndef STAMPS_ACCUMULATOR_H
 #define STAMPS_ACCUMULATOR_H
 
-#include <iostream>
 #include <set>
 #include <vector>
-#include <algorithm>
-#include <string>
 
 #include <boost/bimap.hpp>
 #include <boost/optional.hpp>
@@ -21,7 +18,7 @@ namespace lvn {
         using index_t = std::size_t;
 
         template <typename T, typename D>
-        using stamps_set_t = std::set<lvn::time_stamp<T, D>>;
+        using stamps_set_t = std::multiset<lvn::time_stamp<T, D>>;
 
         template <typename T>
         using inf_time_t = boost::optional<T>;
@@ -42,14 +39,16 @@ namespace lvn {
         using timeline_type = boost::icl::split_interval_map<index_t, property_set_t<D>>;
     }
 
-	template <typename T = int64_t, typename D = std::string>
+	template <typename T, typename D>
 	class stamps_accumulator
     {
         using segment_vec_t = detail::segment_vec_t<T, D>;
-        using stamps_set_t = detail::stamps_set_t<T, D>;
         using timeline_type = detail::timeline_type<D>;
         using bm_type = detail::bm_type<T>;
+
 	public:
+        using stamps_set_t = detail::stamps_set_t<T, D>;
+
         std::vector<segment_vec_t> add(stamps_set_t stamps);
         segment_vec_t result() const;
 		void intersect();
