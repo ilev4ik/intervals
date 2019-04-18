@@ -19,9 +19,13 @@ namespace lvn {
             typename data_type = typename std::iterator_traits<It>::value_type::data_type>
     auto active_segments(It begin, It end) -> std::vector<segment<stamp_type, data_type>>
     {
-        const data_type info = begin->data;
         using stamp_t = time_stamp<stamp_type, data_type>;
         std::vector<segment<stamp_type, data_type>> rv;
+        if (begin == end) {
+            return rv;
+        }
+        const data_type info = begin->data;
+
         rv.reserve(std::distance(begin, end) / 2);
 
         static auto is_active = [](const stamp_t& s) { return s.active; };

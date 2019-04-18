@@ -6,11 +6,17 @@
 
 namespace {
 
-    template <typename T>
-    using empty_segment_vector = const std::vector<lvn::segment<T>>;
+    template <typename T, typename D>
+    using empty_segment_vector = const std::vector<lvn::segment<T, D>>;
 
-    template <typename T>
-    auto active_segments_range(const std::set<lvn::time_stamp<T>>& stamps)
+    template <typename T = int, typename D = std::string>
+    using default_stamp = lvn::time_stamp<T, D>;
+
+    template <typename T = int, typename D = std::string>
+    using default_empty_segments = empty_segment_vector<T, D>;
+
+    template <typename T, typename D>
+    auto active_segments_range(const std::set<default_stamp<T, D>>& stamps)
     {
         return lvn::active_segments(stamps.begin(), stamps.end());
     }
@@ -18,56 +24,56 @@ namespace {
 
 TEST(TestActiveSegments, Empty)
 {
-    std::set<lvn::time_stamp<int>> stamps;
-    ASSERT_EQ(active_segments_range(stamps), empty_segment_vector<int>{});
+    std::set<default_stamp<>> stamps;
+    ASSERT_EQ(active_segments_range(stamps), default_empty_segments<>{});
 }
 
 TEST(TestActiveSegments, SingleActiveStamp)
 {
-    std::set<lvn::time_stamp<int>> stamps = {{0, true}};
-    ASSERT_TRUE((active_segments_range(stamps) == empty_segment_vector<int>{{0, boost::none}}));
+    std::set<default_stamp<>> stamps = {{0, true}};
+    ASSERT_TRUE((active_segments_range(stamps) == default_empty_segments<>{{0, boost::none}}));
 }
 
 TEST(TestActiveSegments, AllActiveStamps)
 {
-    std::set<lvn::time_stamp<int>> stamps = {{0, true}, {10, true}, {20, true}};
-    ASSERT_TRUE((active_segments_range(stamps) == empty_segment_vector<int>{{0, boost::none}}));
+    std::set<default_stamp<>> stamps = {{0, true}, {10, true}, {20, true}};
+    ASSERT_TRUE((active_segments_range(stamps) == default_empty_segments<>{{0, boost::none}}));
 }
 
 TEST(TestInactiveSegments, SingleInactiveStamp)
 {
-    std::set<lvn::time_stamp<int>> stamps = {{0, false}};
-    ASSERT_EQ(active_segments_range(stamps), empty_segment_vector<int>{});
+    std::set<default_stamp<>> stamps = {{0, false}};
+    ASSERT_EQ(active_segments_range(stamps), default_empty_segments<>{});
 }
 
 TEST(TestInactiveSegments, AllInactiveStamps)
 {
-    std::set<lvn::time_stamp<int>> stamps = {{0, false}, {10, false}, {20, false}};
-    ASSERT_EQ(active_segments_range(stamps), empty_segment_vector<int>{});
+    std::set<default_stamp<>> stamps = {{0, false}, {10, false}, {20, false}};
+    ASSERT_EQ(active_segments_range(stamps), default_empty_segments<>{});
 }
 
 TEST(TestActiveSegments, MultipleActiveStampWithOffset)
 {
-    std::set<lvn::time_stamp<int>> stamps = {{0, false}, {5, true}, {10, true}};
-    ASSERT_TRUE((active_segments_range(stamps) == empty_segment_vector<int>{{5, boost::none}}));
+    std::set<default_stamp<>> stamps = {{0, false}, {5, true}, {10, true}};
+    ASSERT_TRUE((active_segments_range(stamps) == default_empty_segments<>{{5, boost::none}}));
 }
 
 TEST(TestComplex, OffsetSingleActive)
 {
-    std::set<lvn::time_stamp<int>> stamps = {
+    std::set<default_stamp<>> stamps = {
             {0, false}, {10, false}, {20, true}, {25, false}
     };
 
-    ASSERT_TRUE((active_segments_range(stamps) == empty_segment_vector<int>{{20, 25}}));
+    ASSERT_TRUE((active_segments_range(stamps) == default_empty_segments<>{{20, 25}}));
 }
 
 TEST(TestComplex, OffsetSingleInactive)
 {
-    std::set<lvn::time_stamp<int>> stamps = {
+    std::set<default_stamp<>> stamps = {
             {0, true}, {10, true}, {20, false}, {25, true}
     };
 
-    ASSERT_TRUE((active_segments_range(stamps) == empty_segment_vector<int>{
+    ASSERT_TRUE((active_segments_range(stamps) == default_empty_segments<>{
         {0, 20},
         {25, boost::none}
     }));
@@ -75,14 +81,14 @@ TEST(TestComplex, OffsetSingleInactive)
 
 TEST(TestComplex, Alternating)
 {
-    std::set<lvn::time_stamp<int>> stamps = {
+    std::set<default_stamp<>> stamps = {
             {0, true}, {10, false}, {20, true},
             {50, false}, {100, true}, {200, false},
             {250, true}, {300, false}, {310, true},
             {320, false}
     };
 
-    ASSERT_TRUE((active_segments_range(stamps) == empty_segment_vector<int>{
+    ASSERT_TRUE((active_segments_range(stamps) == default_empty_segments<>{
             {0, 10},
             {20, 50},
             {100, 200},
@@ -93,14 +99,14 @@ TEST(TestComplex, Alternating)
 
 TEST(TestComplex, AlternatingWithOffset)
 {
-    std::set<lvn::time_stamp<int>> stamps = {
+    std::set<default_stamp<>> stamps = {
             {0, false}, {10, true}, {20, false},
             {50, true}, {100, false}, {200, true},
             {250, false}, {300, true}, {310, false},
             {320, true}
     };
 
-    ASSERT_TRUE((active_segments_range(stamps) == empty_segment_vector<int>{
+    ASSERT_TRUE((active_segments_range(stamps) == default_empty_segments<>{
             {10, 20},
             {50, 100},
             {200, 250},
@@ -111,14 +117,14 @@ TEST(TestComplex, AlternatingWithOffset)
 
 TEST(TestComplex, MixActiveWithInactive)
 {
-    std::set<lvn::time_stamp<int>> stamps = {
+    std::set<default_stamp<>> stamps = {
             {0, false}, {10, false}, {20, true},
             {50, true}, {100, true}, {200, false},
             {250, true}, {300, true}, {310, false},
             {320, true}
     };
 
-    ASSERT_TRUE((active_segments_range(stamps) == empty_segment_vector<int>{
+    ASSERT_TRUE((active_segments_range(stamps) == default_empty_segments<>{
         {20, 200},
         {250, 310},
         {320, boost::none}
