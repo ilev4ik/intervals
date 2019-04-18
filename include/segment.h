@@ -40,7 +40,7 @@ namespace lvn {
                 decltype(info_set.begin()) from, to;
                 std::tie(from, to) = info_set.equal_range(*each);
                 if (std::distance(from, to) > 1) {
-                    std::copy(from, to, std::back_inserter(rv));
+                    rv.push_back(*from);
                 }
             }
             return rv;
