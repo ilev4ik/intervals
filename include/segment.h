@@ -2,6 +2,7 @@
 #ifndef INTERVALS_SEGMENT_H
 #define INTERVALS_SEGMENT_H
 
+#include <vector>
 #include <set>
 #include <ostream>
 #include <boost/optional.hpp>
@@ -24,6 +25,10 @@ namespace lvn {
         {
             info_set.insert(i);
         }
+
+        segment(T s, boost::optional<T> e)
+                : start(s), end(e)
+        {}
 
         T start;
         boost::optional<T> end;
