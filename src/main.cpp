@@ -11,7 +11,7 @@ using namespace lvn::detail;
 
 int main()
 {
-    using stamps_t = stamps_set<int, std::string>;
+    using stamps_t = stamps_set_t<int, std::string>;
     stamps_t stamps1 = {
             {0, true, "11::"},
             {10, true, "22::"},
@@ -38,7 +38,9 @@ int main()
     lvn::underline();
 
     stamper.intersect();
-    stamper.print_res();
+    for (auto&& segment : stamper.result()) {
+        std::cout << segment << std::endl;
+    }
 
     return 0;
 }
