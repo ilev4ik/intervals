@@ -37,11 +37,10 @@ int main()
 
     stamps_t stamps1 = {
             {0, true, {1, "11::"}},
+            {0, true, {4, "11::"}},
             {10, true, {2, "22::"}},
-            {10, true, {4, "44::"}},
             {20, false, {1, "11::"}}
     };
-
 
     stamper_type stamper;
     for (auto&& i : stamper.add(stamps1)) {
