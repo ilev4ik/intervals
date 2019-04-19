@@ -22,7 +22,7 @@ matrix:
         apt:
           update: true
           sources:
-            - sourceline: 'ppa:mhier/libboost-latest'
+            - sourceline: 'ppa:mhier/libboost1.69-all-dev'
             - ubuntu-toolchain-r-test
           packages:
             - g++-7
@@ -33,7 +33,7 @@ matrix:
         apt:
           update: true
           sources:
-            - sourceline: 'ppa:mhier/libboost-latest'
+            - sourceline: 'ppa:mhier/libboost1.69-all-dev'
             - ubuntu-toolchain-r-test
           packages:
             - g++-7
