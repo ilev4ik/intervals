@@ -12,12 +12,16 @@ using namespace lvn;
 using namespace lvn::detail;
 
 struct host_tag {
+    friend bool operator== (const host_tag&,const host_tag&) {return true;}
+
     static std::string as_str() {
         return "host";
     }
+
 };
 
 struct phys_tag {
+    friend bool operator== (const phys_tag&, const phys_tag&) {return true;}
     static std::string as_str() {
         return "phys";
     }
@@ -56,6 +60,8 @@ struct tagged_data {
 
 int main()
 {
+    std::cout << (host_tag{} == host_tag{}) << std::endl;
+
     using stamper_type = stamps_accumulator<int, tagged_data<std::string>>;
     using stamps_t = typename stamper_type::stamps_set_t;
 
