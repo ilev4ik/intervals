@@ -1,11 +1,7 @@
-dist: trusty
-sudo: required
-
 language: cpp
-
-os:
-  - linux
-  - osx
+dist: trusty
+sudo: false
+os: linux
 
 compiler:
   - gcc
@@ -17,18 +13,31 @@ env:
   - TARGET_CPU=amd64 BUILD_CONFIGURATION=Release
   - TARGET_CPU=x86 BUILD_CONFIGURATION=Debug
   - TARGET_CPU=x86 BUILD_CONFIGURATION=Release
-
+  -
 matrix:
-  exclude:
-    # вручную исключим ненужные элементы из матрицы сборки:
-    - os:       osx
+  include:
+    - env: COMPILER=g++-5 BUILD=Debug STANDARD=11
       compiler: gcc
-
-    - os:  osx
-      env: TARGET_CPU=x86 BUILD_CONFIGURATION=Debug
-
-    - os:  osx
-      env: TARGET_CPU=x86 BUILD_CONFIGURATION=Release
+      addons:
+        apt:
+          update: true
+          sources:
+            - sourceline: 'ppa:mhier/libboost-latest'
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-5
+            - boost1.69
+    - env: COMPILER=g++-6 BUILD=Release STANDARD=11
+      compiler: gcc
+      addons:
+        apt:
+          update: true
+          sources:
+            - sourceline: 'ppa:mhier/libboost-latest'
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-5
+            - boost1.69
 
 install:
   # скрипт настройки среды и установки зависимостей:

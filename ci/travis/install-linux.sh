@@ -18,7 +18,7 @@ mkdir -p $CMAKE_DIR
 tar --strip-components=1 -xzf $CMAKE_TAR -C $CMAKE_DIR
 export PATH=$CMAKE_DIR/bin:$PATH
 
-if [ "$TARGET_CPU" == "x86" ]; then
+if [[ "$TARGET_CPU" == "x86" ]]; then
     sudo dpkg --add-architecture i386
     sudo apt-get -qq update
 
