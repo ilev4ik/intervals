@@ -16,7 +16,7 @@ env:
   -
 matrix:
   include:
-    - env: COMPILER=g++-5 BUILD=Debug STANDARD=11
+    - env: COMPILER=g++-7 BUILD=Debug STANDARD=11
       compiler: gcc
       addons:
         apt:
@@ -25,9 +25,9 @@ matrix:
             - sourceline: 'ppa:mhier/libboost-latest'
             - ubuntu-toolchain-r-test
           packages:
-            - g++-5
+            - g++-7
             - boost1.69
-    - env: COMPILER=g++-6 BUILD=Release STANDARD=11
+    - env: COMPILER=g++-7 BUILD=Release STANDARD=11
       compiler: gcc
       addons:
         apt:
@@ -36,7 +36,7 @@ matrix:
             - sourceline: 'ppa:mhier/libboost-latest'
             - ubuntu-toolchain-r-test
           packages:
-            - g++-5
+            - g++-7
             - boost1.69
 
 install:
