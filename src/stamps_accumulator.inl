@@ -1,24 +1,16 @@
-#include "../include/stamps_accumulator.h"
-
 #include <algorithm>
 
 using namespace boost;
 
 namespace lvn {
 
-	using namespace lvn::detail;
+	using namespace detail;
 
 	template <typename T, typename D>
     std::vector<segment_vec_t<T, D>> stamps_accumulator<T, D>::add(stamps_set_t stamps) {
 
         static auto by_prop = [](const time_stamp<T,D>& lhs, const time_stamp<T,D>& rhs) -> bool {
             return lhs.data == rhs.data;
-        };
-
-        static auto equals_prop_data = [](const D& data) {
-            return [data](const time_stamp<T,D>& stamp) -> bool {
-                return data == stamp.data;
-            };
         };
 
         // prepare data - get unique properties
@@ -37,8 +29,8 @@ namespace lvn {
             const auto prop = *from;
             stamps_set_t prop_stamps;
             std::copy_if(stamps.begin(), stamps.end(), std::inserter(prop_stamps, prop_stamps.begin()),
-                    equals_prop_data(prop.data));
-            auto actives = active_segments(prop_stamps.begin(), prop_stamps.end());
+                    std::bind(by_prop, prop, std::placeholders::_1));
+            const auto& actives = active_segments(prop_stamps.begin(), prop_stamps.end());
             multi_segment_vec.push_back(actives);
             rv.push_back(actives);
             from++;

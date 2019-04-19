@@ -62,6 +62,6 @@ namespace lvn {
 
 }
 
-#include <stamps_accumulator.inl>
+#include "../src/stamps_accumulator.inl"
 
 #endif // STAMPS_ACCUMULATOR_H
