@@ -16,14 +16,6 @@ namespace lvn {
         }
     };
 
-    struct tag_visitor : public boost::static_visitor<std::string>
-    {
-        template <typename T>
-        std::string operator()(T) const {
-            return T::as_str();
-        }
-    };
-
     template<typename...>
     struct pack { };
 
@@ -53,12 +45,21 @@ namespace lvn {
     template <template <typename, typename> class B, typename D, typename H>
     struct tagged_data_base : tagged_data_packed<D, typename H::Tags> {
 
+        template <typename V>
+        struct tag_visitor : public boost::static_visitor<V>
+        {
+            template <typename T>
+            V operator()(T) const {
+                return T::as_str();
+            }
+        };
+
         using tagged_data_packed<D, typename H::Tags>::tagged_data_packed;
 
         std::string as_str() const {
             std::stringstream ss;
             ss << "{ ";
-            ss << boost::apply_visitor(tag_visitor{}, this->tag) << ", " << this->id << ", " << this->data;
+            ss << boost::apply_visitor(tag_visitor<D>{}, this->tag) << ", " << this->id << ", " << this->data;
             ss << "}";
             return ss.str();
         }
