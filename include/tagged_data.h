@@ -35,7 +35,7 @@ namespace lvn {
     template <template <typename, typename> class B, typename D, typename H>
     struct tagged_data_base;
 
-    template <typename D, typename H>
+    template <typename D, typename... T>
     struct tagged_data_packed {};
 
     template <typename D, typename... T>
@@ -57,7 +57,9 @@ namespace lvn {
 
         std::string as_str() const {
             std::stringstream ss;
-            ss << "{ " << boost::apply_visitor(tag_visitor{}, this->tag) << ", " << this->id << ", " << this->data << "}";
+            ss << "{ ";
+            ss << boost::apply_visitor(tag_visitor{}, this->tag) << ", " << this->id << ", " << this->data;
+            ss << "}";
             return ss.str();
         }
 
