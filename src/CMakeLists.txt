@@ -5,7 +5,7 @@ add_executable(intervals main.cpp stamps_accumulator.inl
         ${INCLUDE_DIR}/time_stamp.h
         ${INCLUDE_DIR}/utils.h
         ${INCLUDE_DIR}/stamps_accumulator.h
-        ${INCLUDE_DIR}/property_generator.h ../include/my_traits.h)
+        ${INCLUDE_DIR}/property_generator.h ../include/my_traits.h ../include/tagged_data.h)
 
 target_include_directories(intervals PUBLIC ${INCLUDE_DIR})
 target_include_directories(intervals PUBLIC ${Boost_INCLUDE_DIRS})

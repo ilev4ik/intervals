@@ -1,68 +1,20 @@
-#include <boost/variant.hpp>
-
-#include <boost/bimap.hpp>
-#include <boost/optional.hpp>
-#include <boost/icl/split_interval_map.hpp>
-
-#include "../include/active_segments.h"
 #include "../include/utils.h"
 #include "../include/stamps_accumulator.h"
+#include "tagged_data.h"
 
-using namespace lvn;
-using namespace lvn::detail;
-
-struct host_tag {
-    friend bool operator== (const host_tag&,const host_tag&) {return true;}
-
-    static std::string as_str() {
-        return "host";
-    }
-
+struct host_tag : lvn::tag_base<host_tag> {
+    constexpr static auto str = "host";
 };
 
-struct phys_tag {
-    friend bool operator== (const phys_tag&, const phys_tag&) {return true;}
-    static std::string as_str() {
-        return "phys";
-    }
-
-};
-
-struct tag_visitor : public boost::static_visitor<std::string>
-{
-    template <typename T>
-    std::string operator()(T) const {
-        return T::as_str();
-    }
-};
-
-template <typename D>
-struct tagged_data {
-    int id;
-    boost::variant<host_tag, phys_tag> tag;
-    D data;
-
-    // for multiset
-    friend bool operator< (const tagged_data<D>& lhs, const tagged_data<D>& rhs) {
-        return lhs.data < rhs.data;
-    }
-
-    // for adjacent_find and groupings
-    friend bool operator== (const tagged_data<D>& lhs, const tagged_data<D>& rhs) {
-        return lhs.tag == rhs.tag && lhs.id == rhs.id && lhs.data == rhs.data;
-    }
-
-    // for debugging :)
-    friend std::ostream& operator<< (std::ostream& os, const tagged_data<D>& d) {
-        return os << "{ " << boost::apply_visitor(tag_visitor{}, d.tag) << ", " << d.id << ", " << d.data << "}";
-    }
+struct phys_tag : lvn::tag_base<phys_tag> {
+    constexpr static auto str = "phys";
 };
 
 int main()
 {
-    std::cout << (host_tag{} == host_tag{}) << std::endl;
+    using namespace lvn;
 
-    using stamper_type = stamps_accumulator<int, tagged_data<std::string>>;
+    using stamper_type = stamps_accumulator<int, tagged_data<std::string, tags<host_tag, phys_tag>>>;
     using stamps_t = typename stamper_type::stamps_set_t;
 
     stamps_t stamps1 = {
@@ -71,7 +23,6 @@ int main()
             {10, true, {2, host_tag{}, "22::"}},
             {20, false, {1, host_tag{}, "11::"}}
     };
-
 
     stamper_type stamper;
     for (auto&& i : stamper.add(stamps1)) {
