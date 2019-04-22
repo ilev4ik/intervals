@@ -3,11 +3,11 @@
 #include "tagged_data.h"
 
 struct host_tag : lvn::tag_base<host_tag> {
-    constexpr static auto str = "host";
+    static constexpr const char* str = "host";
 };
 
 struct phys_tag : lvn::tag_base<phys_tag> {
-    constexpr static auto str = "phys";
+    static constexpr const char* str = "phys";
 };
 
 int main()
@@ -48,9 +48,10 @@ int main()
 
     for (auto&& segment : stamper.result()) {
         std::cout << segment << " => \n";
-        std::cout << "\t collisions: ";
         for (auto&& collision : segment.collisions()) {
-            std::cout << collision << " ";
+            std::cout << "\t collisions on " << collision.first << ": ";
+            lvn::print_iterable_range(collision.second, " ");
+            std::cout << std::endl;
         }
         std::cout << "\n\n";
     }

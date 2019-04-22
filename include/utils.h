@@ -11,13 +11,13 @@
 
 namespace lvn {
     template<typename It>
-    void print_iterable(It begin, It end) {
-        std::copy(begin, end, std::ostream_iterator<typename std::iterator_traits<It>::value_type>(std::cout, "\n"));
+    void print_iterable(It begin, It end, const char* sep = "\n") {
+        std::copy(begin, end, std::ostream_iterator<typename std::iterator_traits<It>::value_type>(std::cout, sep));
     }
 
-    template<typename Container>
-    void print_iterable_range(Container c) {
-        print_iterable(c.begin(), c.end());
+    template<typename Range>
+    void print_iterable_range(Range c, const char* sep = "\n") {
+        print_iterable(c.begin(), c.end(), sep);
     }
 
     void underline(char symb = '=', std::size_t count = 20) {

@@ -28,7 +28,7 @@ namespace lvn {
     struct tagged_data_base;
 
     template <typename D, typename... T>
-    struct tagged_data_packed {};
+    struct tagged_data_packed;
 
     template <typename D, typename... T>
     struct tagged_data_packed<D, pack<T...>> {
@@ -84,6 +84,7 @@ namespace lvn {
     template <typename D, typename H>
     struct tagged_data : tagged_data_base<tagged_data, D, H> {
         using tagged_data_base<tagged_data, D, H>::tagged_data_base;
+        using data_type = D;
     };
 
 }

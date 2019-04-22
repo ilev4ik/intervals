@@ -2,11 +2,12 @@
 #ifndef INTERVALS_SEGMENT_H
 #define INTERVALS_SEGMENT_H
 
-#include <vector>
+#include <unordered_map>
 #include <set>
 #include <ostream>
-#include <boost/optional.hpp>
 #include <string>
+
+#include <boost/optional.hpp>
 
 namespace lvn {
 
@@ -35,17 +36,19 @@ namespace lvn {
         boost::optional<T> end;
         std::multiset<D> info_set;
 
-        std::vector<D> collisions() const {
-            std::vector<D> rv;
+        std::unordered_map<typename D::data_type, std::vector<D>> collisions() const {
+            std::unordered_map<typename D::data_type, std::vector<D>> rv;
+
             for (auto each = info_set.begin(); each != info_set.end(); each = info_set.upper_bound(*each)) {
                 decltype(info_set.begin()) from, to;
 
                 std::tie(from, to) = info_set.equal_range(*each);
                 if (std::distance(from, to) > 1) {
-                    std::copy(from, to, std::back_inserter(rv));
+                    std::copy(from, to, std::back_inserter(rv[from->data]));
                 }
 
             }
+
             return rv;
         }
 
@@ -67,7 +70,7 @@ namespace lvn {
             return lhs.start == rhs.start && lhs.end == rhs.end;
         }
 
-        friend std::ostream &operator<<(std::ostream& os, const segment<T, D>& s) {
+        friend std::ostream& operator<<(std::ostream& os, const segment<T, D>& s) {
             static const std::string infty = "\xE2\x88\x9E";
 
             os << "[ ";
