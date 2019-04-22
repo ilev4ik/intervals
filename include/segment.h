@@ -2,6 +2,7 @@
 #ifndef INTERVALS_SEGMENT_H
 #define INTERVALS_SEGMENT_H
 
+#include <vector>
 #include <unordered_map>
 #include <set>
 #include <ostream>

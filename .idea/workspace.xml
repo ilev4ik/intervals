@@ -31,7 +31,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5f029306-ace4-43e1-997a-94c2a24a1b0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/segment.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/segment.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/tagged_data.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/tagged_data.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/intervals_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/intervals_test.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug-cygwin/" />
@@ -52,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="323">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="24" selection-end-column="6" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -61,27 +64,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/include/tagged_data.h">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/active_segments.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+            <state relative-caret-position="204">
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
               <folding>
-                <element signature="e#78#95#0" expanded="true" />
-                <element signature="e#82#94#0" expanded="true" />
-                <element signature="e#495#508#0" expanded="true" />
-                <element signature="e#536#551#0" expanded="true" />
-                <element signature="e#608#671#0" expanded="true" />
-                <element signature="e#618#638#0" expanded="true" />
-                <element signature="e#795#822#0" expanded="true" />
-                <element signature="e#871#898#0" expanded="true" />
-                <element signature="e#911#923#0" expanded="true" />
-                <element signature="e#1051#1114#0" expanded="true" />
-                <element signature="e#1061#1081#0" expanded="true" />
-                <element signature="e#1157#1169#0" expanded="true" />
-                <element signature="e#1268#1280#0" expanded="true" />
-                <element signature="e#1949#1973#0" expanded="true" />
+                <element signature="e#86#106#0" expanded="true" />
+                <element signature="e#271#468#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/utils.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+              <folding>
+                <element signature="e#66#84#0" expanded="true" />
+                <element signature="e#212#225#0" expanded="true" />
+                <element signature="e#423#439#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/property_generator.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -89,38 +103,83 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/segment.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+            <state relative-caret-position="238">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="89" selection-end-column="6" />
               <folding>
                 <element signature="e#70#87#0" expanded="true" />
+                <element signature="e#200#245#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+        <entry file="file://$PROJECT_DIR$/include/stamps_accumulator.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state relative-caret-position="340">
+              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+              <folding>
+                <element signature="e#72#86#0" expanded="true" />
+                <element signature="e#1038#1062#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/stamps_accumulator.inl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="73" column="35" lean-forward="true" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="35" />
+              <folding>
+                <element signature="e#99#123#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
+        <entry file="file://$PROJECT_DIR$/include/time_stamp.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="442">
+              <caret line="26" column="6" selection-start-line="9" selection-start-column="4" selection-end-line="26" selection-end-column="6" />
+              <folding>
+                <element signature="e#76#94#0" expanded="true" />
+                <element signature="e#145#169#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/CMakeLists.txt">
+        <entry file="file://$PROJECT_DIR$/test/intervals_test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="136">
+              <caret line="8" column="52" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#136#160#0" expanded="true" />
+                <element signature="e#307#345#0" expanded="true" />
+                <element signature="e#409#433#0" expanded="true" />
+                <element signature="e#525#549#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/tagged_data.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#78#95#0" expanded="true" />
+                <element signature="e#155#167#0" expanded="true" />
+                <element signature="e#356#369#0" expanded="true" />
+                <element signature="e#405#420#0" expanded="true" />
+                <element signature="e#600#627#0" expanded="true" />
+                <element signature="e#2242#2266#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,6 +220,8 @@
       <find>data_comparator</find>
       <find>equals_prop_data</find>
       <find>tag_visitor</find>
+      <find>vector</find>
+      <find>id</find>
     </findStrings>
     <replaceStrings>
       <replace>Stamp</replace>
@@ -198,9 +259,6 @@
         <option value="$PROJECT_DIR$/include/time_stamp.h" />
         <option value="$PROJECT_DIR$/include/my_traits.h" />
         <option value="$PROJECT_DIR$/include/active_segments.h" />
-        <option value="$PROJECT_DIR$/include/utils.h" />
-        <option value="$PROJECT_DIR$/test/intervals_test.cpp" />
-        <option value="$PROJECT_DIR$/include/segment.h" />
         <option value="$PROJECT_DIR$/ci/travis/install-osx.sh" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/README.rst" />
@@ -209,18 +267,23 @@
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/src/stamps_accumulator.cpp" />
         <option value="$PROJECT_DIR$/include/stamps_accumulator.h" />
-        <option value="$PROJECT_DIR$/src/stamps_accumulator.inl" />
         <option value="$PROJECT_DIR$/include/tag_base.h" />
         <option value="$PROJECT_DIR$/include/tags_pack.h" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/include/utils.h" />
+        <option value="$PROJECT_DIR$/include/segment.h" />
+        <option value="$PROJECT_DIR$/test/intervals_test.cpp" />
         <option value="$PROJECT_DIR$/include/tagged_data.h" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/stamps_accumulator.inl" />
       </list>
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="960" />
-    <option name="height" value="1032" />
+    <option name="x" value="1939" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -228,33 +291,44 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="intervals" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cpp17" type="462c0819:PsiDirectoryNode" />
+              <item name="CLionProjects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="intervals" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cpp17" type="462c0819:PsiDirectoryNode" />
+              <item name="CLionProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intervals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CLionProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="ci" type="462c0819:PsiDirectoryNode" />
+              <item name="travis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intervals" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CLionProjects" type="462c0819:PsiDirectoryNode" />
               <item name="include" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="intervals" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cpp17" type="462c0819:PsiDirectoryNode" />
+              <item name="CLionProjects" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="intervals" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cpp17" type="462c0819:PsiDirectoryNode" />
+              <item name="CLionProjects" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555727399598</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="stable: prerefactor">
+      <created>1555938070544</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1555938070544</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -531,27 +612,27 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122522000" />
+    <option name="totallyTimeSpent" value="132529000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22234157" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23827292" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28700566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41386783" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2654388" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.4978678" weight="0.2542373" />
+      <window_info anchor="bottom" id="Messages" order="8" sideWeight="0.49733475" weight="0.45720476" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3299435" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021322" side_tool="true" weight="0.46587217" />
-      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.7690655" weight="0.32881355" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5026652" side_tool="true" weight="0.2524377" />
+      <window_info anchor="bottom" id="Version Control" order="11" sideWeight="0.7690655" weight="0.32827735" />
       <window_info anchor="bottom" id="CMake" order="12" sideWeight="0.4989259" weight="0.32768363" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -619,6 +700,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -642,7 +737,8 @@
     <MESSAGE value="tag+id entity identification" />
     <MESSAGE value="feature: some templates magic for pretty tagging" />
     <MESSAGE value="refactoring: type fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring: type fix" />
+    <MESSAGE value="stable: prerefactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="stable: prerefactor" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../cygwin64/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/bits/stl_algobase.h" />
@@ -653,9 +749,7 @@
     <entry file="file://$USER_HOME$/.CLion2019.1/system/cygwin_cmake/share/cmake-3.13.4/Modules/FindGTest.cmake" />
     <entry file="file://$USER_HOME$/.CLion2019.1/system/cygwin_cmake/share/cmake-3.13.4/Modules/FindPackageHandleStandardArgs.cmake" />
     <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/numeric/interval/checking.hpp" />
-    <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/numeric/interval/policies.hpp" />
     <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/numeric/interval/rounding.hpp" />
-    <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/numeric/interval.hpp" />
     <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/numeric/interval/rounded_arith.hpp" />
     <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/icl/concept/interval.hpp" />
     <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/numeric/interval/interval.hpp" />
@@ -676,34 +770,7 @@
     <entry file="file://$PROJECT_DIR$/../cygwin64/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/bits/stl_algo.h" />
     <entry file="file://$PROJECT_DIR$/../cygwin64/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/bits/basic_string.h" />
     <entry file="file://$PROJECT_DIR$/../cygwin64/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/bits/stl_function.h" />
-    <entry file="file://$PROJECT_DIR$/include/utils.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-          <folding>
-            <element signature="e#66#84#0" expanded="true" />
-            <element signature="e#177#190#0" expanded="true" />
-            <element signature="e#372#392#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../cygwin64/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/bits/stl_multiset.h" />
-    <entry file="file://$PROJECT_DIR$/test/intervals_test.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#136#160#0" expanded="true" />
-            <element signature="e#247#291#0" expanded="true" />
-            <element signature="e#355#399#0" expanded="true" />
-            <element signature="e#477#521#0" expanded="true" />
-            <element signature="e#477#501#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../cygwin64/lib/gcc/x86_64-pc-cygwin/7.4.0/include/c++/bits/stl_tree.h" />
     <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -731,8 +798,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ci/travis/install-linux.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state relative-caret-position="17">
+          <caret line="1" column="54" selection-start-line="1" selection-start-column="54" selection-end-line="1" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -743,23 +810,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
+    <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/variant/static_visitor.hpp" />
+    <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/variant/variant.hpp" />
+    <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/numeric/interval/policies.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+        <state relative-caret-position="-589">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#500#532#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/variant/static_visitor.hpp" />
-    <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/variant/variant.hpp" />
-    <entry file="file://$PROJECT_DIR$/include/active_segments.h">
+    <entry file="file://$PROJECT_DIR$/../cygwin64/usr/local/boost_1_69_0/boost/numeric/interval.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="55" selection-end-line="58" />
-          <folding>
-            <element signature="e#86#106#0" expanded="true" />
-            <element signature="e#271#468#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="266">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -767,6 +840,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/utils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="61" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding>
+            <element signature="e#66#84#0" expanded="true" />
+            <element signature="e#212#225#0" expanded="true" />
+            <element signature="e#423#439#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/intervals_test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="52" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#136#160#0" expanded="true" />
+            <element signature="e#307#345#0" expanded="true" />
+            <element signature="e#409#433#0" expanded="true" />
+            <element signature="e#525#549#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -779,28 +878,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/segment.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="58" column="25" selection-start-line="58" selection-start-column="25" selection-end-line="58" selection-end-column="25" />
+        <state relative-caret-position="238">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="89" selection-end-column="6" />
           <folding>
             <element signature="e#70#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/stamps_accumulator.inl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-          <folding>
-            <element signature="e#104#128#0" expanded="true" />
+            <element signature="e#200#245#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/time_stamp.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        <state relative-caret-position="425">
+          <caret line="26" column="6" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="26" selection-end-column="6" />
           <folding>
             <element signature="e#76#94#0" expanded="true" />
             <element signature="e#145#169#0" expanded="true" />
@@ -808,37 +898,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/cygwin64/usr/local/boost_1_69_0/boost/numeric/interval/policies.hpp">
+    <entry file="file://$PROJECT_DIR$/include/active_segments.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-589">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="204">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
-            <element signature="e#500#532#0" expanded="true" />
+            <element signature="e#86#106#0" expanded="true" />
+            <element signature="e#271#468#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/cygwin64/usr/local/boost_1_69_0/boost/numeric/interval.hpp">
+    <entry file="file://$PROJECT_DIR$/src/stamps_accumulator.inl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="153">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding>
+            <element signature="e#99#123#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/stamps_accumulator.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="60" column="6" lean-forward="true" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+        <state relative-caret-position="-194">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding>
             <element signature="e#72#86#0" expanded="true" />
+            <element signature="e#1038#1062#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="-309">
+          <caret line="19" column="4" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="24" selection-end-column="6" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
@@ -847,23 +942,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/include/tagged_data.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+        <state relative-caret-position="-510">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#78#95#0" expanded="true" />
-            <element signature="e#82#94#0" expanded="true" />
-            <element signature="e#495#508#0" expanded="true" />
-            <element signature="e#536#551#0" expanded="true" />
-            <element signature="e#608#671#0" expanded="true" />
-            <element signature="e#618#638#0" expanded="true" />
-            <element signature="e#795#822#0" expanded="true" />
-            <element signature="e#871#898#0" expanded="true" />
-            <element signature="e#911#923#0" expanded="true" />
-            <element signature="e#1051#1114#0" expanded="true" />
-            <element signature="e#1061#1081#0" expanded="true" />
-            <element signature="e#1157#1169#0" expanded="true" />
-            <element signature="e#1268#1280#0" expanded="true" />
-            <element signature="e#1949#1973#0" expanded="true" />
+            <element signature="e#155#167#0" expanded="true" />
+            <element signature="e#356#369#0" expanded="true" />
+            <element signature="e#405#420#0" expanded="true" />
+            <element signature="e#600#627#0" expanded="true" />
+            <element signature="e#2242#2266#0" expanded="true" />
           </folding>
         </state>
       </provider>

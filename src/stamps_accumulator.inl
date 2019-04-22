@@ -16,7 +16,7 @@ namespace lvn {
         // prepare data - get unique properties
         std::vector<time_stamp<T,D>> stamps_vec;
         std::copy(stamps.begin(), stamps.end(), std::back_inserter(stamps_vec));
-        std::sort(stamps_vec.begin(), stamps_vec.end(), by_prop);
+        std::sort(stamps_vec.begin(), stamps_vec.end());
         auto last = std::unique(stamps_vec.begin(), stamps_vec.end(), by_prop);
         auto& unique_props = stamps_vec;
 

@@ -37,7 +37,7 @@ namespace lvn {
         D data;
 
         template <typename P>
-        tagged_data_packed(int id_, const P tag_, const D data_)
+        tagged_data_packed(int id_, const P& tag_, const D& data_ = {})
                 : id(id_), tag(tag_), data(data_)
         {}
     };
